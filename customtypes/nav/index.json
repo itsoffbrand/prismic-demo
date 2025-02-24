@@ -1,0 +1,39 @@
+{
+  "format": "custom",
+  "id": "nav",
+  "label": "Nav",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "pages": {
+        "type": "Group",
+        "config": {
+          "label": "pages",
+          "repeat": true,
+          "fields": {
+            "name": {
+              "type": "Text",
+              "config": {
+                "label": "name",
+                "placeholder": ""
+              }
+            },
+            "href": {
+              "type": "Link",
+              "config": {
+                "label": "href",
+                "placeholder": "",
+                "select": null,
+                "allowTargetBlank": false,
+                "allowText": true,
+                "repeat": false,
+                "variants": ["Primary", "Secondary"]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
