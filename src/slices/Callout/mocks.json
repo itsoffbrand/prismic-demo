@@ -5,7 +5,7 @@
 		"primary": {
 			"title": {
 				"__TYPE__": "FieldContent",
-				"value": "date",
+				"value": "stay",
 				"type": "Text"
 			},
 			"subtitle": {

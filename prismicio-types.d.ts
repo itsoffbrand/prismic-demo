@@ -168,7 +168,7 @@ export interface CalloutSliceDefaultPrimary {
    * title field in *Callout → Default → Primary*
    *
    * - **Field Type**: Text
-   * - **Placeholder**: *None*
+   * - **Placeholder**: Designed for Modern Living
    * - **API ID Path**: callout.default.primary.title
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */

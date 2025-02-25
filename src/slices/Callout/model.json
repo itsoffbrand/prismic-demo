@@ -16,7 +16,7 @@
           "type": "Text",
           "config": {
             "label": "title",
-            "placeholder": ""
+            "placeholder": "Designed for Modern Living"
           }
         },
         "subtitle": {
