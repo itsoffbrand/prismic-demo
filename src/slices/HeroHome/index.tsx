@@ -15,23 +15,28 @@ const HeroHome: FC<HeroHomeProps> = ({ slice }) => {
   // console.log(slice);
 
   return (
-    <header
-      className="h-[100vh] outline outline-red-700 w-full border-2 border-blue-500 relative flex items-center justify-center"
+    <section
+      className="pt-xl flex-center h-screen w-full"
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      {/* <PrismicImage
+      <div className="absolute inset-0 overflow-hidden">
+        <PrismicImage
           field={slice.primary.image}
           className="absolute inset-0 object-cover opacity-20"
-        /> */}
+        />
+      </div>
 
-      <div className="relative z-10 bg-red-500">
-        <h1 style={{ fontSize: "24px" }} className="text-[3em]">
+      <div className="relative z-10 flex flex-col gap-4">
+        <h1 className="max-w-[20ch] text-xl leading-[1.2em]">
           {slice.primary.title}
         </h1>
-        <PrismicRichText field={slice.primary.subtitle} />
+
+        <div className="max-w-[30ch]">
+          <PrismicRichText field={slice.primary.subtitle} />
+        </div>
       </div>
-    </header>
+    </section>
   );
 };
 

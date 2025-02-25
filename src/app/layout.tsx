@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
+import { ReactLenis, useLenis } from "../libs/lenis";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -29,8 +30,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
-        <PrismicPreview repositoryName={repositoryName} />
+        <ReactLenis root>
+          <>
+            {children}
+            <PrismicPreview repositoryName={repositoryName} />
+          </>
+        </ReactLenis>
       </body>
     </html>
   );

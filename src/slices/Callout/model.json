@@ -50,6 +50,14 @@
             "label": "note",
             "placeholder": ""
           }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "image",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
       },
       "items": {}
@@ -99,6 +107,22 @@
           "config": {
             "label": "note",
             "placeholder": ""
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "inner_image": {
+          "type": "Image",
+          "config": {
+            "label": "inner image",
+            "constraint": {},
+            "thumbnails": []
           }
         }
       },

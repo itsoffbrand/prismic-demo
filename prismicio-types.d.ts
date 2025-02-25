@@ -203,6 +203,16 @@ export interface CalloutSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   note: prismic.KeyTextField;
+
+  /**
+   * image field in *Callout → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callout.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
 }
 
 /**
@@ -261,6 +271,26 @@ export interface CalloutSliceAlternatePrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   note: prismic.KeyTextField;
+
+  /**
+   * image field in *Callout → alternate → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callout.alternate.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * inner image field in *Callout → alternate → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callout.alternate.primary.inner_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  inner_image: prismic.ImageField<never>;
 }
 
 /**
