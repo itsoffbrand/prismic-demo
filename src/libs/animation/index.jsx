@@ -25,12 +25,22 @@ const defaultCallback = (isIntersecting) => {
 };
 
 export const useAnimateInView = (cb = defaultCallback) => {
-  const { ref } = useIntersectionObserver({
+  const { ref, isIntersecting, entry } = useIntersectionObserver({
     threshold: 0.1,
     onChange: (isIntersecting) => {
       cb(isIntersecting);
     },
   });
 
-  return { ref };
+  return { ref, target: entry?.target };
 };
+
+export const useInView = (cb = defaultCallback) => {
+  const { ref, inView } = useIntersectionObserver({
+    threshold: 0.1,
+  });
+
+  return { ref, inView };
+};
+
+// ////////////////////////

@@ -43,6 +43,6 @@ body {
 
 @layer components {
   .flex-center {
-    @apply flex items-center justify-center flex-col;
+    @apply flex flex-col items-center justify-center;
   }
 }

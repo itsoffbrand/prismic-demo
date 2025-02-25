@@ -2,6 +2,8 @@
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 import { SliceZone } from "@prismicio/react";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 export default async function Home() {
   const client = createClient();
@@ -10,8 +12,10 @@ export default async function Home() {
   // console.log(home);
 
   return (
-    <div className="min-h-screen pb-20  font-[family-name:var(--font-geist-sans)]">
+    <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
+      <Nav />
       <SliceZone slices={home.data.slices} components={components} />
+      <Footer />
     </div>
   );
 }
