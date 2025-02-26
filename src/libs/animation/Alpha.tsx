@@ -2,7 +2,6 @@
 import { ReactNode, useRef } from "react";
 import { useAnimateInView } from ".";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 
 export const Alpha = ({ children }: { children: ReactNode }) => {
   const anim = {

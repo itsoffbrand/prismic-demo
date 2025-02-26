@@ -1,6 +1,6 @@
 "use client";
-import { ReactNode, useEffect, useRef } from "react";
-import { useAnimateInView, useInView } from ".";
+import { ReactNode, useRef } from "react";
+import { useAnimateInView } from ".";
 import gsap from "gsap";
 
 export const MaskImage = ({
