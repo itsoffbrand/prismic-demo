@@ -7,4 +7,5 @@ export const components = {
   closing: dynamic(() => import("./Closing")),
   hero_home: dynamic(() => import("./HeroHome")),
   home_info: dynamic(() => import("./HomeInfo")),
+  model_section: dynamic(() => import("./ModelSection")),
 };

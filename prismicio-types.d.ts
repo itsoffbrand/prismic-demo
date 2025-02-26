@@ -5,6 +5,7 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type HomeDocumentDataSlicesSlice =
+  | ModelSectionSlice
   | ClosingSlice
   | CalloutSlice
   | HomeInfoSlice
@@ -545,6 +546,72 @@ export type HomeInfoSlice = prismic.SharedSlice<
   HomeInfoSliceVariation
 >;
 
+/**
+ * Primary content in *ModelSection → Default → Primary*
+ */
+export interface ModelSectionSliceDefaultPrimary {
+  /**
+   * model field in *ModelSection → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: 1
+   * - **API ID Path**: model_section.default.primary.model
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  model: prismic.SelectField<"1" | "2", "filled">;
+
+  /**
+   * title field in *ModelSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: model_section.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * subtitle field in *ModelSection → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: model_section.default.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  subtitle: prismic.RichTextField;
+}
+
+/**
+ * Default variation for ModelSection Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ModelSectionSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ModelSectionSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ModelSection*
+ */
+type ModelSectionSliceVariation = ModelSectionSliceDefault;
+
+/**
+ * ModelSection Shared Slice
+ *
+ * - **API ID**: `model_section`
+ * - **Description**: ModelSection
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ModelSectionSlice = prismic.SharedSlice<
+  "model_section",
+  ModelSectionSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -594,6 +661,10 @@ declare module "@prismicio/client" {
       HomeInfoSliceDefaultPrimary,
       HomeInfoSliceVariation,
       HomeInfoSliceDefault,
+      ModelSectionSlice,
+      ModelSectionSliceDefaultPrimary,
+      ModelSectionSliceVariation,
+      ModelSectionSliceDefault,
     };
   }
 }
