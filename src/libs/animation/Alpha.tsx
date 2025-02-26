@@ -11,7 +11,7 @@ export const Alpha = ({ children }: { children: ReactNode }) => {
 
   const { ref } = useAnimateInView((intersecting) => {
     if (intersecting) {
-      anim.a.value = gsap.to(anim.el.current, {
+      anim.a.current = gsap.to(anim.el.current, {
         autoAlpha: 1,
         duration: 1,
         delay: 0.2,
